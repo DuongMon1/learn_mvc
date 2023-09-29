@@ -1,5 +1,5 @@
 <?php
-class RoomModel extends DB
+class RoomModelForNhanVien extends DB
 {
     public function getAllRoom()
     {
@@ -14,15 +14,14 @@ class RoomModel extends DB
 
         return mysqli_query($this->connection, $query);
     }
-  
+
     public function getTenKH($roomID)
     {
         $query = "SELECT name FROM rooms WHERE roomID = '$roomID'";
 
         return mysqli_query($this->connection, $query);
     }
-
-
+    
     public function getARoomForName($name)
     {
         $query = "SELECT * FROM rooms WHERE name = '$name'";
@@ -37,15 +36,9 @@ class RoomModel extends DB
         return mysqli_query($this->connection, $query);
     }
 
-    public function addRoom($roomID, $loaiPhong, $trangthaiPhong, $name, $gia)
+    public function updateARoom($roomID, $loaiphong, $trangthaiPhong, $name, $gia)
     {
-        $query = "INSERT INTO rooms(roomID, loaiphong, trangthaiphong, name, gia) VALUES($roomID, '$loaiPhong', '$trangthaiPhong', '$name', $gia)";
-        mysqli_query($this->connection, $query);
-    }
-
-    public function updateARoom($roomID, $loaiPhong, $trangthaiPhong, $name, $gia)
-    {
-        $query  = "UPDATE rooms SET loaiphong = '$loaiPhong', trangthaiphong = '$trangthaiPhong', name = '$name', gia = '$gia' WHERE roomID = '$roomID'";
+        $query  = "UPDATE rooms SET loaiphong = '$loaiphong', trangthaiphong = '$trangthaiPhong', name = '$name', gia = '$gia' WHERE roomID = '$roomID'";
 
         mysqli_query($this->connection, $query);
     }
@@ -64,12 +57,6 @@ class RoomModel extends DB
         mysqli_query($this->connection, $query);
     }
 
-    public function deleteRoom($roomID)
-    {
-        $query = "DELETE FROM roooms WHERE roomID = '$roomID'";
-        mysqli_query($this->connection, $query);
-    }
-
     public function getLoaiPhong($roomID)
     {
         $query = "SELECT loaiphong FROM rooms WHERE roomID = '$roomID'";
@@ -84,5 +71,12 @@ class RoomModel extends DB
         $data = mysqli_query($this->connection, $query);
         $gia = mysqli_fetch_row($data);
         return $gia[0];
+    }
+
+    public function updateTinhTrangPhong($roomID, $tinhtrangphong)
+    {
+        $query = "UPDATE rooms SET tinhtrangphong = '$tinhtrangphong' WHERE roomID = '$roomID'";
+
+        mysqli_query($this->connection, $query);
     }
 }

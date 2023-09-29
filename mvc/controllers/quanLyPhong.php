@@ -15,7 +15,7 @@ class quanLyPhong extends Controller
 
             $checkRoom = $roomModel->getARoom($tenphong);
             if (mysqli_num_rows($checkRoom) > 0) {
-                echo "dda ton tai";
+                echo "Đã tồn tại";
             } else {
                 $roomModel->addRoom($tenphong, $loaiphong, $trangthaiphong, $trangthaiphong, $gia);
             }

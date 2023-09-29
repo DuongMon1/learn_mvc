@@ -21,11 +21,10 @@
                             <a class="nav-link" aria-current="page" href="./home">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./quanLyPhong">Quản lý phòng</a>
+                            <a class="nav-link" href="../../../../learn_mvc/QuanLyPhongForNhanVien">Quản lý phòng</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="./quanLyDichVu">Quản lý dịch vụ</a>
+                            <a class="nav-link" href="../../../../learn_mvc/QuanLyDichVuForNhanVien">Quản lý dịch vụ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./quanLyKhachHang">Quản lý khách hàng</a>

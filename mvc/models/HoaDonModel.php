@@ -25,4 +25,16 @@ class HoaDonModel extends DB
 
         mysqli_query($this->connection, $query);
     }
+
+    public function updateHoaDonNgayNhan($name, $roomID, $ngaynhan){
+        $query = "UPDATE hoadon SET ngaynhan = '$ngaynhan' WHERE name = '$name' AND roomID = '$roomID' ";
+
+        mysqli_query($this->connection, $query);
+    }
+
+    public function updateHoaDonTraPhong($roomID, $ngaytra){
+        $query = "UPDATE hoadon SET ngaytra = '$ngaytra' WHERE roomID = '$roomID' ";
+
+        mysqli_query($this->connection, $query);
+    }
 }

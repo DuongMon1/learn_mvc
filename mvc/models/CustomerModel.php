@@ -25,6 +25,13 @@ class CustomerModel extends DB
         return mysqli_query($this->connection, $query);
     }
 
+    public function getACustomerForCCCD($cccd)
+    {
+        $query = "SELECT * FROM customer WHERE cccd = '$cccd'";
+
+        return mysqli_query($this->connection, $query);
+    }
+
     public function getACustomerForID($ID)
     {
         $query = "SELECT * FROM customer WHERE customerID = '$ID'";
@@ -46,5 +53,21 @@ class CustomerModel extends DB
         SET cccd = '$cccd', sdt = '$sdt', ngaysinh ='$ngaysinh', quoctich = '$quoctich', diachi = '$diachi', gioitinh = '$gioitinh' WHERE name = '$name'";
 
         mysqli_query($this->connection, $query);
+    }
+
+    public function updateOldCustomer($cccd, $solandat)
+    {
+        $query = "UPDATE customer SET solandatphong = '$solandat' WHERE cccd = '$cccd'";
+
+        mysqli_query($this->connection, $query);
+    }
+
+    public function getSoLanDatPhong($cccd){
+        $query = "SELECT solandat from customer where cccd = '$cccd' ";
+        
+        $data = mysqli_query($this->connection, $query);
+
+        $num = mysqli_fetch_column($data);
+        return $num[8];
     }
 }
