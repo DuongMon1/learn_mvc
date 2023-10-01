@@ -23,6 +23,11 @@ class quanLyPhong extends Controller
             // echo $tenphong, $loaiphong, $trangthaiphong, $gia;
         }
 
+        if (isset($_POST['loc'])) {
+            $loc = $_POST['locphong'];
+
+            echo $loc;
+        }
 
 
         $dataRoomAlone = $roomModel->getRoomType("Phòng đơn");
@@ -34,7 +39,8 @@ class quanLyPhong extends Controller
             "roomAlone" => $dataRoomAlone,
             "roomCouple" => $dataRoomCouple,
             "roomFamily" => $dataRoomFamily,
-            "hoadonModel" => $hoadonModel
+            "hoadonModel" => $hoadonModel,
+            "locphong" => $loc
         ]);
     }
 }

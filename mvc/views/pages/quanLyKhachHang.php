@@ -34,7 +34,7 @@ $customers = $data['customers'];
 
                         </button>
                         <button type="button" class="btn btn-success" data-bs-toggle="modal">
-                            <a href="./quanLyKhachHang/chitietkhachhang/<?php echo $customer['customerID'] ?>" style="text-decoration: none;  color: white;">Chi tiết</a>
+                            <a href="./quanLyKhachHang/chitietkhachhang/<?php echo $customer['customerID'] . "/" . $customer['name'] ?>" style="text-decoration: none;  color: white;">Chi tiết</a>
                         </button>
                     </td>
                 </tr>

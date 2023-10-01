@@ -55,6 +55,7 @@ class CustomerModel extends DB
         mysqli_query($this->connection, $query);
     }
 
+<<<<<<< HEAD
     public function updateOldCustomer($cccd, $solandat)
     {
         $query = "UPDATE customer SET solandatphong = '$solandat' WHERE cccd = '$cccd'";
@@ -69,5 +70,18 @@ class CustomerModel extends DB
 
         $num = mysqli_fetch_column($data);
         return $num[8];
+=======
+
+    public function suatrangthaidat($name)
+    {
+        $query = "UPDATE customer SET dangdat= 'Đã trả' WHERE name = '$name'";
+        mysqli_query($this->connection, $query);
+    }
+
+    public function suatrangdat($name)
+    {
+        $query = "UPDATE customer SET dangdat= 'Đã đặt' WHERE name = '$name'";
+        mysqli_query($this->connection, $query);
+>>>>>>> 02b8d5f (push phan dich vu khach hang)
     }
 }
