@@ -43,10 +43,9 @@ class quanLyKhachHang extends Controller
     }
 
 
-    public function chitietkhachhang($id)
+    public function chitietkhachhang($id, $name)
     {
         $customerModel = $this->model("CustomerModel");
-
 
         $dataCustomer = $customerModel->getACustomerForID($id);
 

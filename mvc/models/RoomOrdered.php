@@ -7,4 +7,12 @@ class RoomOrdered extends DB
 
         mysqli_query($this->connection, $query);
     }
+
+
+    public function getSHD($roomID, $name, $ngaydat,)
+    {
+        $query = "SELECT * FROM rooms_ordered WHERE roomID = '$roomID' AND name = '$name' AND ngaydat= '$ngaydat'";
+
+        return mysqli_query($this->connection, $query);
+    }
 }

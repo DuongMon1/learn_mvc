@@ -30,6 +30,7 @@ class RoomModel extends DB
         return mysqli_query($this->connection, $query);
     }
 
+
     public function getRoomType($loaiphong)
     {
         $query = "SELECT * FROM rooms WHERE loaiphong = '$loaiphong'";
@@ -50,6 +51,13 @@ class RoomModel extends DB
         mysqli_query($this->connection, $query);
     }
 
+    public function setPhongtrong($roomID)
+    {
+        $query  = "UPDATE rooms SET name = 'Đang trống' WHERE roomID = '$roomID'";
+
+        mysqli_query($this->connection, $query);
+    }
+
     public function updateStatusRoom($roomID, $trangthaiPhong, $name)
     {
         $query  = "UPDATE rooms SET  trangthaiphong = '$trangthaiPhong',  name = '$name' WHERE roomID = '$roomID'";
@@ -57,7 +65,11 @@ class RoomModel extends DB
         mysqli_query($this->connection, $query);
     }
 
+<<<<<<< HEAD
     public function updatetrangthaiphong($roomID, $trangthaiPhong)
+=======
+    public function updateTrangthaiphong($roomID, $trangthaiPhong)
+>>>>>>> 02b8d5f (push phan dich vu khach hang)
     {
         $query  = "UPDATE rooms SET  trangthaiphong = '$trangthaiPhong' WHERE roomID = '$roomID'";
 
@@ -66,7 +78,7 @@ class RoomModel extends DB
 
     public function deleteRoom($roomID)
     {
-        $query = "DELETE FROM roooms WHERE roomID = '$roomID'";
+        $query = "DELETE FROM rooms WHERE roomID = '$roomID' ";
         mysqli_query($this->connection, $query);
     }
 

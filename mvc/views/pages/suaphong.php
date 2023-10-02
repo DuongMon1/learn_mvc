@@ -51,13 +51,13 @@ $room = mysqli_fetch_row($dataRoom);
             <input name="loaiphong" style="margin-top: 6px; margin-bottom: 20px;" value="<?php echo $room[1] ?>" type="text" class="form-control" aria-label="" aria-describedby="basic-addon1">
 
 
-            <label for="">Trạng thái phòng</label>
+            <!-- <label for="">Trạng thái phòng</label>
             <select name="trangthaiphong" style="margin-top: 6px; margin-bottom: 20px;" value="<?php echo $room[2] ?>" class="form-select" aria-label="Default select example">
                 <option selected>Trạng thái</option>
                 <option value="Đang trống">Đang trống</option>
                 <option value="Đã đặt">Đã đặt</option>
                 <option value="Đã nhận">Đã nhận</option>
-            </select>
+            </select> -->
 
             <label for="">Ngày đặt</label>
             <input name="ngaydat" style="margin-top: 6px; margin-bottom: 20px;" value="<?php echo $ngaydat[3] ?>" type="date" class="form-control" aria-label="" aria-describedby="basic-addon1">
@@ -85,13 +85,13 @@ $room = mysqli_fetch_row($dataRoom);
             <input name="loaiphong" style="margin-top: 6px; margin-bottom: 20px;" value="<?php echo $room[1] ?>" type="text" class="form-control" aria-label="" aria-describedby="basic-addon1">
 
 
-            <label for="">Trạng thái phòng</label>
+            <!-- <label for="">Trạng thái phòng</label>
             <select name="trangthaiphong" style="margin-top: 6px; margin-bottom: 20px;" value="<?php echo $room[2] ?>" class="form-select" aria-label="Default select example">
                 <option selected>Trạng thái</option>
                 <option value="Đang trống">Đang trống</option>
                 <option value="Đã đặt">Đã đặt</option>
                 <option value="Đã nhận">Đã nhận</option>
-            </select>
+            </select> -->
 
             <label for="">Ngày đặt</label>
             <input name="ngaydat" style="margin-top: 6px; margin-bottom: 20px;" value="<?php echo $ngaydat[3] ?>" type="date" class="form-control" aria-label="" aria-describedby="basic-addon1">

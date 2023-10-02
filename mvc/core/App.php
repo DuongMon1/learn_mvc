@@ -10,11 +10,12 @@ class App
     {
         $arr_url = $this->URL_process();
 
-        if (file_exists("./mvc/controllers/" . $arr_url[0] . ".php")) {
+
+        if (file_exists("../learn_mvc/mvc/controllers/" . $arr_url[0] . ".php")) {
             $this->controller = $arr_url[0];
             unset($arr_url[0]);
         }
-        require_once "./mvc/controllers/" . $this->controller . ".php";
+        require_once "../learn_mvc/mvc/controllers/" . $this->controller . ".php";
         $this->controller = new $this->controller;
 
 
